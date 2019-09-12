@@ -123,7 +123,3 @@ document.addEventListener('click', function (event) {
     }
   } 
 })
-
-//   <audio>
-//     <source src="assets/audio/pokemusic.mp3" type="audio/mp3">
-// </audio>
