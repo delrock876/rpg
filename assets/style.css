@@ -1,0 +1,65 @@
+nav {
+background-color: green;
+width: 100%;
+margin: 0;
+}
+
+.container {
+display:grid;
+margin-top: 30px;
+width: 1280px;
+height: 850px;
+grid-template-columns: 1fr 2fr 2fr 1fr;
+grid-template-rows: 3fr 3fr 1fr;
+grid-template-areas: 
+"otherOpp oppStat oppImg choose "
+"otherOpp yourImg yourStat choose "
+"otherOpp scores scores . ";
+}
+
+.choose{
+  grid-area: choose;
+}
+
+.cont{
+  padding-top:100px;
+}
+.otherOpp{
+grid-area: otherOpp;
+}
+
+.oppStat{
+grid-area: oppStat;
+}
+.oppImg{
+grid-area: oppImg;
+}
+.yourImg{
+grid-area: yourImg;
+}
+
+.yourStat{
+grid-area: yourStat;
+}
+.scores{
+grid-area: scores;
+}
+
+.bulb {
+  display: inline;
+}
+.btn-small{
+  width: 100%;
+  background-color: green;
+}
+
+.scores {
+  padding-left: 20px;
+}
+
+.lol{
+  width: 50%;
+  display: flex;
+  padding-left: 20px;
+
+}
