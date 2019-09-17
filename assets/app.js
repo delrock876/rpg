@@ -8,11 +8,14 @@ let battleMusic = new Audio("assets/audio/pokemusic.mp3")
 const uselessCounter = () => {
   let lessCount = Math.floor(Math.random() * 16)
   yourCharacter.health -= lessCount
+  document.getElementById('yS').innerHTML = `<h2>Health : ${yourCharacter.health} </h2>
+        <a id = "atk-btn" class="waves-effect waves-light btn-small lol" > Attack</a >`
 
 }
 const strongAttack = () => {
-  let strAttack = Math.floor(Math.random() * 31) + 10
+  let strAttack = Math.floor(Math.random() * 41) + 20
   yourOpponent.health -= strAttack
+  document.getElementById('oS').innerHTML = `<h2>Health : ${yourOpponent.health} </h2>`
 }
 
 
@@ -107,10 +110,6 @@ document.addEventListener('click', function (event) {
       if (event.target.id === 'atk-btn') {
         strongAttack(yourCharacter)
         uselessCounter(yourOpponent)
-        // document.createElement('p').innerHTML = `You were attacked for ${lessCount}damage! You did ${strAttack}`
-        document.getElementById('yS').innerHTML = `<h2>Health : ${yourCharacter.health} </h2>
-        <a id = "atk-btn" class="waves-effect waves-light btn-small lol" > Attack</a >`
-        document.getElementById('oS').innerHTML = `<h2>Health : ${yourOpponent.health} </h2>`
       }
     } else if ((yourCharacter.health > 0) && (yourOpponent.health <= 0)) {
       alert('chose next opponent')
@@ -118,7 +117,7 @@ document.addEventListener('click', function (event) {
     } else if (yourCharacter.health <= 0) {
       alert('you died')
       //restart
-    }else if (allPokemon === []){
+    }else if (allPokemon === []){ //not sure...
       alert('you won')
     }
   } 
